@@ -4,7 +4,20 @@
   
     
     <entry>
-      <title>第一批文章</title>
+      <title>SQL查询、排序方法</title>
+      <link href="/2023/11/11/SQL%E6%9F%A5%E8%AF%A2%E6%8E%92%E5%BA%8F/"/>
+      <url>/2023/11/11/SQL%E6%9F%A5%E8%AF%A2%E6%8E%92%E5%BA%8F/</url>
+      
+        <content type="html"><![CDATA[<h1 id="聚合函数"><a href="#聚合函数" class="headerlink" title="聚合函数"></a>聚合函数</h1><h2 id="1、统计该企业员工数量"><a href="#1、统计该企业员工数量" class="headerlink" title="1、统计该企业员工数量"></a>1、统计该企业员工数量</h2><p><code>select count(id) from emp ;</code><br><code>select count(idcard) from emp ;  -- 不计算null值</code></p><h2 id="2、统计平均年龄"><a href="#2、统计平均年龄" class="headerlink" title="2、统计平均年龄"></a>2、统计平均年龄</h2><p><code>select avg(age) from emp ;</code></p><h2 id="3、最大年龄"><a href="#3、最大年龄" class="headerlink" title="3、最大年龄"></a>3、最大年龄</h2><p><code>select max(age) from emp ;</code></p><h2 id="3、最小年龄"><a href="#3、最小年龄" class="headerlink" title="3、最小年龄"></a>3、最小年龄</h2><p><code>select min(age) from emp ;</code></p><h2 id="4、统计北京地区员工年龄之和"><a href="#4、统计北京地区员工年龄之和" class="headerlink" title="4、统计北京地区员工年龄之和"></a>4、统计北京地区员工年龄之和</h2><p><code>select sum(age) from emp where workadress = &#39;北京&#39;</code></p><h1 id="分组查询"><a href="#分组查询" class="headerlink" title="分组查询"></a>分组查询</h1><h2 id="1、根据性别分组，统计男生女生人数"><a href="#1、根据性别分组，统计男生女生人数" class="headerlink" title="1、根据性别分组，统计男生女生人数"></a>1、根据性别分组，统计男生女生人数</h2><p><code>select gender,count(*) from emp group by gender;</code></p><h2 id="2、根据性别分组，统计男生女生平均年龄"><a href="#2、根据性别分组，统计男生女生平均年龄" class="headerlink" title="2、根据性别分组，统计男生女生平均年龄"></a>2、根据性别分组，统计男生女生平均年龄</h2><p><code>select gender,avg(age) from emp group by gender;</code></p><h2 id="3、查询年龄小于40的员工，并根据工作地址分组，获取员工数量大于3的工作地址"><a href="#3、查询年龄小于40的员工，并根据工作地址分组，获取员工数量大于3的工作地址" class="headerlink" title="3、查询年龄小于40的员工，并根据工作地址分组，获取员工数量大于3的工作地址"></a>3、查询年龄小于40的员工，并根据工作地址分组，获取员工数量大于3的工作地址</h2><pre><code class="select">select workadress, count(*) address_count from emp where age &lt; 40 group by workadress having address_count &gt;= 3;  -- 起别名不用having```# 排序查询## 写法：select * from 表名 **order by** 字段1 排序方式**,**字段2 排序方式asc : 升序  desc：降序##1、对员工按照年龄进行升序排序`select * from emp order by age asc ; -- asc可以省略`</code></pre>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>第一篇文章</title>
       <link href="/2022/10/28/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/"/>
       <url>/2022/10/28/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
       
